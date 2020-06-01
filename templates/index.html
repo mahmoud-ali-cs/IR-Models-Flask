@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>IR Models</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css.scss') }}">
+    </head>
+    <body>
+        <h1>IR Models</h1>
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <h3>{{ message }}</h3>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        <ul>
+            <li>
+                <a href="{{ url_for('statistical')}}">
+                    Statistical Model
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('vector_space')}}">
+                    Vector Space Model
+                </a>                
+            </li>
+            <li>
+                <a href="{{ url_for('generateDocs')}}">
+                    Generate Docs
+                </a>                
+            </li>
+        </ul>
+
+
+
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
