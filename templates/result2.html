@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>{{model_name}} Model</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css.scss') }}">
+    </head>
+    <body>
+        <h1>{{model_name}} Model</h1>
+        
+        <h2>Cos Similarity</h2>
+        <ul>
+        {% for d in result %}
+            <li>{{ d[0] ~ " : "  ~ d[1] }}</li>
+        {% endfor %}
+        </ul>
+        <!-- <hr> -->
+        <h2>Auth</h2>
+        <ul>
+            {% for d in auth_hub[0] %}
+                <li>{{ d[0] ~ " : "  ~ d[1] }}</li>
+            {% endfor %}
+        </ul>
+        <!-- <hr> -->
+        <h2>Hub</h2>
+        <ul>
+            {% for d in auth_hub[1] %}
+                <li>{{ d[0] ~ " : "  ~ d[1] }}</li>
+            {% endfor %}
+        </ul>
+
+
+        <div class="button_cont" align="center">
+            <a class="example_e" href="{{ url_for('index')}}" rel="nofollow noopener">
+                    Home Page
+            </a>
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
